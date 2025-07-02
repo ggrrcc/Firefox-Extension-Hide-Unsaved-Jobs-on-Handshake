@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Handshake Job Hider",
+  "version": "1.0",
+  "description": "Hides all jobs on Handshake search page by clicking the Hide buttons.",
+  "permissions": ["tabs", "<all_urls>"],
+  "browser_action": {
+    "default_title": "Hide Jobs"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.joinhandshake.com/*"],
+      "js": [],
+      "run_at": "document_idle"
+    }
+  ]
+}

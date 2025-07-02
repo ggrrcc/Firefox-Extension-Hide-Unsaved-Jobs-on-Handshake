@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Handshake Job Hider",
+  "version": "1.0",
+  "description": "Automatically hide all jobs on Handshake search page.",
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": ["*://*.joinhandshake.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Hide Jobs",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.joinhandshake.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
