@@ -26,7 +26,7 @@ async function hideUnsavedJobs() {
 
     hideBtn.click();
     clicked++;
-    await sleep(50); // Wait 50 ms between clicks
+    await sleep(60); // Wait 60 ms between clicks
   }
 
   console.log(`✅ Done: ${clicked} jobs hidden, ${skipped} jobs skipped (saved).`);
